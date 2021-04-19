@@ -71,14 +71,14 @@
             "summary": 
 			{
                 "overviewName": "OVERVIEW",
-                "_overviewComment": "A short description of what happens in this tutorial, and an optional short explanation of the ACE concepts used in this tutorial if necessary for context. What background knowledge must the user have for this to make sense?",
+                "_overviewComment": "A short description of what happens in this tutorial, and an optional short explanation of the concepts used in this tutorial if necessary for context. What background knowledge must the user have for this to make sense?",
                 "sections": 
 				[
                     {
                         "section": "This tutorial demonstrates two simple message flows. The first is driven from an input XML file which contains data representing three famous couples (Romeo and Juliet, Lennon and McCartney, Laurel and Hardy). After this data is read by a FileInput node, a Compute node iterates over the data and divides each pair. MQOutput nodes send separate messages with the name of one person to one queue and the name of the other person to a second queue. Both MQ messages are given the same MsgId in their MQMD header. A second message flow is driven by an MQInput node reading one of these messages from its queue. Next an MQGet node uses the MsgId to read in the second message. Finally a downstream Trace node writes out a trace file containing both pieces of data reunited together."
                     },
                     {
-                        "section": "The tutorial requires an ACE integration node owned server, or a standalone server."
+                        "section": "The tutorial requires an integration node owned server, or a standalone server."
                     },
                     {
                         "section": "In IBM App Connect Enterprise, an application is a container for all the resources that are required to create a solution. This tutorial provides an application to hold the message flow. This scenario uses MQ nodes which are configured to interact with a local queue manager. The flows expect to be deployed to an integration node associated with a local queue manager. There are no other pre-requisites needed by the scenario."
